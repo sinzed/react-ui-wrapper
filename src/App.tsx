@@ -22,7 +22,7 @@ export default function App() {
         mx: 'auto'
       }}
     >
-      <Paper elevation={0} sx={{ p: 3, borderRadius: 2 }}>
+      {/* <Paper elevation={0} sx={{ p: 3, borderRadius: 2 }}>
         <Typography variant="h5" component="h1" gutterBottom>
           god-button-action-button
         </Typography>
@@ -34,7 +34,7 @@ export default function App() {
         <Typography variant="body2" color="text.secondary">
           Last menu selection: <strong>{last ?? '—'}</strong>
         </Typography>
-      </Paper>
+      </Paper> */}
 
       <ActionButton
         yourRoleName="تست"
