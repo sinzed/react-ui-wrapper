@@ -6,9 +6,11 @@ import {
   ActionButton,
   type ActionButtonMenuItemId
 } from 'god-button-action-button'
+import { useMockMessages } from './useMockMessages'
 
 export default function App() {
   const [last, setLast] = useState<ActionButtonMenuItemId | null>(null)
+  const messages = useMockMessages(15_000)
 
   return (
     <Box
@@ -25,12 +27,12 @@ export default function App() {
           god-button-action-button
         </Typography>
         <Typography color="text.secondary" paragraph>
-          Floating button is from the npm package. Tap it to open the menu;
-          drag it to move. Long-press the circle to snap back.
+          Mock chat pushes a message every 15s. A preview bubble appears above the
+          button for 10s; the red badge shows unread until you open the menu and tap{' '}
+          <strong>پیام ها</strong>.
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Last menu selection:{' '}
-          <strong>{last ?? '—'}</strong>
+          Last menu selection: <strong>{last ?? '—'}</strong>
         </Typography>
       </Paper>
 
@@ -38,6 +40,8 @@ export default function App() {
         yourRoleName="تست"
         playerNamesContent="بازیکن ۱، بازیکن ۲"
         gameRoleNamesContent="پزشک، مافیا"
+        messages={messages}
+        messagePreviewDurationMs={10_000}
         onItemClick={(id) => setLast(id)}
       />
     </Box>
