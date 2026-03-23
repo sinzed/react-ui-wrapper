@@ -38,8 +38,56 @@ export default function App() {
 
       <ActionButton
         yourRoleName="تست"
-        playerNamesContent="بازیکن ۱، بازیکن ۲"
-        gameRoleNamesContent="پزشک، مافیا"
+        playerNamesContent={
+          <>
+            1. Dummy3 Dummy3
+            <br />
+            2. Dummy7 Dummy7
+            <br />
+            3. Dummy10 Dummy10
+            <br />
+            4. Dummy1 Dummy1
+            <br />
+            5. Dummy12 Dummy12
+            <br />
+            6. Dummy11 Dummy11
+            <br />
+            7. Dummy5 Dummy5
+            <br />
+            8. Dummy13 Dummy13
+            <br />
+            9. سیدو sido
+            <br />
+            10. Dummy6 Dummy6
+            <br />
+            11. Dummy2 Dummy2
+          </>
+        }
+        gameRoleNamesContent={
+          <>
+            1. خدا
+            <br />
+            2. پدرخوانده
+            <br />
+            3. شیاد
+            <br />
+            4. ناتو
+            <br />
+            5. محقق
+            <br />
+            6. رویین تن
+            <br />
+            7. بازپرس
+            <br />
+            8. پزشک
+            <br />
+            9. کارآگاه
+            <br />
+            10. شهروند
+            <br />
+            11. شهروند 1
+          </>
+        }
         messages={messages}
         messagePreviewDurationMs={10_000}
         onItemClick={(id) => setLast(id)}
